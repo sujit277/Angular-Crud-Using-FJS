@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "firstName": "Sujit",
+      "lastName": "Verma",
+      "emailID": "sujit7941@gmail.com",
+      "mobileNo": "768638267",
+      "designation": "Junior Software Engineer"
+    },
+    {
+      "id": 2,
+      "firstName": "Anjali ",
+      "lastName": "Kumari",
+      "emailID": "anjali123@gmail.com",
+      "mobileNo": "7686382676",
+      "designation": "Associate Software Engineer"
+    },
+    {
+      "id": 3,
+      "firstName": "Puja",
+      "lastName": "Kumari",
+      "emailID": "puja12@gmail.com",
+      "mobileNo": "7897987979",
+      "designation": "Senior Software Engineer"
+    },
+    {
+      "id": 4,
+      "firstName": "Chandani",
+      "lastName": "Kumari",
+      "emailID": "chandani12@gmail.com",
+      "mobileNo": "7686382683",
+      "designation": "Junior Software Engineer"
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

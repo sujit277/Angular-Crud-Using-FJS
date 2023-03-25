@@ -17,20 +17,12 @@
       "designation": "Associate Software Engineer"
     },
     {
-      "id": 3,
-      "firstName": "Puja",
-      "lastName": "Kumari",
-      "emailID": "puja12@gmail.com",
-      "mobileNo": "7897987979",
-      "designation": "Senior Software Engineer"
-    },
-    {
       "id": 4,
       "firstName": "Chandani",
       "lastName": "Kumari",
-      "emailID": "chandani12@gmail.com",
-      "mobileNo": "7686382683",
-      "designation": "Junior Software Engineer"
+      "emailID": "chand@123@gmail.com",
+      "mobileNo": "78978979898",
+      "designation": "Software Engineer"
     }
   ],
   "comments": [],

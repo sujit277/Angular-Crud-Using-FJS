@@ -1,0 +1,2 @@
+Fake Json Server Installation - npm install -g json-server
+Fake Json Server Running - json-server --watch db.json

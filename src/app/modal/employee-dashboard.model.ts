@@ -1,10 +1,10 @@
 export class EmployeeModel {
-  id: number = 0;
-  firstName: string = '';
-  lastName: string = '';
-  emailID: string = '';
-  mobileNo: string = '';
-  designation: string = '';
+  id!: number;
+  firstName!: string;
+  lastName!: string;
+  emailID!: string;
+  mobileNo!: string;
+  designation!: string;
 
   constructor(
     firstName: string,

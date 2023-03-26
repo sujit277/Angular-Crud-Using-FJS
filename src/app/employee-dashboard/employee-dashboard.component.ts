@@ -9,13 +9,8 @@ import { ApiService } from '../services/api.service';
   styleUrls: ['./employee-dashboard.component.css'],
 })
 export class EmployeeDashboardComponent implements OnInit {
-  EmployeeModelobj!: EmployeeModel;
+  EmployeeModelobj = new EmployeeModel('', '', '', '', '');
   Employeedata: any;
-  firstName = '';
-  lastName = '';
-  emailID = '';
-  mobileNo = '';
-  designation = '';
 
   constructor(private api: ApiService) {}
 
@@ -33,19 +28,14 @@ export class EmployeeDashboardComponent implements OnInit {
 
   /* Method for Adding Records */
   postEmployeeDetails() {
-    this.firstName = this.Addform.value.firstName;
-    this.lastName = this.Addform.value.lastName;
-    this.emailID = this.Addform.value.emailID;
-    this.mobileNo = this.Addform.value.mobileNo;
-    this.designation = this.Addform.value.designation;
     this.EmployeeModelobj = new EmployeeModel(
-      this.firstName,
-      this.lastName,
-      this.emailID,
-      this.mobileNo,
-      this.designation
+      this.Addform.value.firstName,
+      this.Addform.value.lastName,
+      this.Addform.value.emailID,
+      this.Addform.value.mobileNo,
+      this.Addform.value.designation
     );
-    this.api.postEmployee(this.EmployeeModelobj).subscribe((res) => {
+    this.api.postEmployee(this.EmployeeModelobj).subscribe(() => {
       alert('Data Added Successfully');
       this.Addform.reset();
       this.getAllEmployee();
@@ -54,14 +44,14 @@ export class EmployeeDashboardComponent implements OnInit {
 
   /*  Method for Getting Records */
   getAllEmployee() {
-    this.api.getEmployee().subscribe((res) => {
-      this.Employeedata = res;
+    this.api.getEmployee().subscribe((data) => {
+      this.Employeedata = data;
     });
   }
 
   /* Method For Deleting Records */
-  delEmployee(row: any) {
-    this.api.deleteEmployee(row.id).subscribe((res) => {
+  delEmployee(data: any) {
+    this.api.deleteEmployee(data.id).subscribe(() => {
       alert('Data Deleted Successfully');
       this.getAllEmployee();
     });
@@ -86,7 +76,7 @@ export class EmployeeDashboardComponent implements OnInit {
     this.EmployeeModelobj.designation = this.Addform.value.designation;
     this.api
       .updateEmployee(this.EmployeeModelobj, this.EmployeeModelobj.id)
-      .subscribe((res) => {
+      .subscribe(() => {
         alert('Data Updated Successfully');
         this.Addform.reset();
         this.getAllEmployee();
